@@ -68,22 +68,25 @@ namespace AlphaBBS
             hide_all ();
 
             var window = new Window (Gtk.WindowType.TOPLEVEL);
-            var v = new Terminal();
+            var vte = new Terminal();
 
             if (ssh.get_active() == true) {
-                v.fork_command ("ssh", {"ssh", "-p", port.text, "bbs@" + site.text}, null, null, false, false, false);
+                vte.fork_command ("ssh", {"ssh", "-p", port.text, "bbs@" + site.text}, null, null, false, false, false);
             } else {
-                v.fork_command ("telnet", {"telnet", "-E", site.text, port.text}, null, null, false, false, false);
+                vte.fork_command ("telnet", {"telnet", "-E", site.text, port.text}, null, null, false, false, false);
             }
-            v.set_encoding (encoding.text);
-            v.set_size (80, 24);
-            //v.set_background_transparent (true);
+            vte.set_encoding (encoding.text);
+            vte.set_size (80, 24);
+            //vte.set_background_transparent (true);
             window.title = "AlphaBBS - " + site.text;
-            window.add (v);
+            window.add (vte);
             window.position = WindowPosition.CENTER;
             window.set_resizable (false);
             window.show_all ();
             window.destroy.connect (Gtk.main_quit);
+            vte.child_exited.connect ((vte) => {
+                Gtk.main_quit ();
+            });
         }
 
         public static int main (string[] args)
