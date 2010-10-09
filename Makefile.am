@@ -1,4 +1,8 @@
-bin_PROGRAMS = hello
-hello_SOURCES = hello.vala
-hello_CPPFLAGS = @GLIB_CFLAGS@
-hello_LDFLAGS = @GLIB_LIBS@
+# AM_VALAFLAGS = --pkg gtk+-2.0
+
+bin_PROGRAMS = MyApp
+
+MyApp_SOURCES = MyApp.vala
+MyApp_CPPFLAGS = @GLIB_CFLAGS@ @GTK_CFLAGS@
+MyApp_LDFLAGS = @GLIB_LIBS@ @GTK_LIBS@
+MyApp_VALAFLAGS = --pkg gtk+-2.0
