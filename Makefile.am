@@ -1,8 +1,6 @@
-# AM_VALAFLAGS = --pkg gtk+-2.0
+bin_PROGRAMS = alphabbs
 
-bin_PROGRAMS = MyApp
-
-MyApp_SOURCES = MyApp.vala
-MyApp_CPPFLAGS = @GLIB_CFLAGS@ @GTK_CFLAGS@
-MyApp_LDFLAGS = @GLIB_LIBS@ @GTK_LIBS@
-MyApp_VALAFLAGS = --pkg gtk+-2.0
+alphabbs_SOURCES = AlphaBBS.vala
+alphabbs_CPPFLAGS = @VTE_CFLAGS@
+alphabbs_LDFLAGS = @VTE_LIBS@
+alphabbs_VALAFLAGS = --pkg vte

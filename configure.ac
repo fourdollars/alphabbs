@@ -11,8 +11,9 @@ AC_PROG_CC
 AM_PROG_VALAC([0.8.0])
 
 # Checks for libraries.
-AM_PATH_GLIB_2_0(,,,[gobject])                                  
-AM_PATH_GTK_2_0
+#AM_PATH_GLIB_2_0(,,,[gobject])
+#AM_PATH_GTK_2_0
+PKG_CHECK_MODULES(VTE, vte)
 
 # Checks for header files.
 
