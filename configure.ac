@@ -19,5 +19,8 @@ PKG_CHECK_MODULES(VTE, vte)
 
 # Checks for library functions.
 
-AC_CONFIG_FILES([Makefile man/Makefile])
+AC_CONFIG_FILES([
+                 Makefile
+                 man/Makefile
+                 alphabbs.desktop])
 AC_OUTPUT

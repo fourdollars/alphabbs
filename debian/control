@@ -8,6 +8,6 @@ Homepage: http://github.com/fourdollars/alphabbs
 
 Package: alphabbs
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libvte9 (>= 1:0.23.5), telnet-client, ssh-client
+Depends: ${shlibs:Depends}, ${misc:Depends}, libvte9 (>= 1:0.23.5), telnet, ssh-client
 Description: GTK+ BBS Client
  Just another GTK+ BBS client implemented by Vala.

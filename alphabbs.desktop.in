@@ -1,0 +1,9 @@
+[Desktop Entry]
+Categories=Application;Network;
+Encoding=UTF-8
+Name=AlphaBBS
+Exec=alphabbs
+Type=Application
+Terminal=false
+GenericName=AlphaBBS GTK+ BBS Client
+Comment=Just another GTK+ BBS Client implemented by Vala.
