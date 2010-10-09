@@ -1,0 +1,13 @@
+Source: alphabbs
+Section: x11
+Priority: extra
+Maintainer: Shih-Yuan Lee (FourDollars) <fourdollars@gmail.com>
+Build-Depends: quilt (>= 0.46-7~), debhelper (>= 7), autotools-dev, libvte-dev (>= 1:0.23.5)
+Standards-Version: 3.9.1
+Homepage: http://github.com/fourdollars/alphabbs
+
+Package: alphabbs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libvte9 (>= 1:0.23.5), telnet-client, ssh-client
+Description: GTK+ BBS Client
+ Just another GTK+ BBS client implemented by Vala.
